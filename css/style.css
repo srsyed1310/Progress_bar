@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main_container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3edf7;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.container{
+    /* border: 1px solid yellow; */
+    /* padding: 10px; */
+    position: relative;
+}
+
+
+.outer{
+    /* border: 2px solid green; */
+    /* padding: 10px; */
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner{
+    /* border: 2px solid blue; */
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                    0.5px 0.5px 0px rgba(255, 255, 255, 0.15),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+#number_65,
+#number_100,
+#number_80{
+    /* border: 2px solid red; */
+    font-size: 2rem;
+    font-weight: 500;
+    color: #414141;
+}
+
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    /* stroke-dashoffset: 472; */
+}
+
+#Circle_65{
+    stroke-dashoffset: 472;
+    animation: anim_65 2s linear forwards;
+}
+
+
+#Circle_100{
+    stroke-dashoffset: 472;
+    animation: anim_100 3.3s linear forwards;
+
+}
+
+#Circle_80{
+    stroke-dashoffset: 472;
+    animation: anim_80 2.5s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+@keyframes anim_65 {
+    100%{
+        stroke-dashoffset: 165.2;
+    }
+}
+@keyframes anim_100 {
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes anim_80 {
+    100%{
+        stroke-dashoffset: 90;
+    }
+}
